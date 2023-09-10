@@ -1,0 +1,26 @@
+:root {
+	--blue: #0009AF;
+	--cream: #FAF0CC;
+}
+
+html {
+	font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: var(--blue);
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--cream);
+}
+
+#project-list {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#NavBar {
+    float: right;
+}
