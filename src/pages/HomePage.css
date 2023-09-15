@@ -21,6 +21,6 @@ body {
     row-gap: 10px;
 }
 
-#NavBar {
+.NavBar {
     float: right;
 }
