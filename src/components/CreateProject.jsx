@@ -10,6 +10,8 @@ function CreateProject() {
         description: "",
         goal: "",
         image: "",
+        date_created: new Date().toISOString(),
+        is_open: true,
     });
 
     const handleChange = (e) => {
@@ -23,7 +25,7 @@ function CreateProject() {
         e.preventDefault()
         setIsLoading(true)
 
-        postProject({...projectData, project:props.projectdate_created, project:props.projectis_true })
+        postProject({...projectData})
         .then(() => {
         navigate(0)
     })
