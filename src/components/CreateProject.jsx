@@ -10,6 +10,7 @@ function CreateProject() {
         description: "",
         goal: "",
         image: "",
+        sport: "",
         date_created: new Date().toISOString(),
         is_open: true,
     });
@@ -27,7 +28,7 @@ function CreateProject() {
         projectData.date_created = new Date().toISOString();
         projectData.is_open = true;
 
-        postProject({...projectData})
+        postProject({...projectData, project: props.projectData.date_created,project: props.projectData.is_open})
         .then(() => {
         navigate(0)
     })
