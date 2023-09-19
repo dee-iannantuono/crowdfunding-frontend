@@ -12,9 +12,10 @@ function NavBar() {
     console.log(auth)
 
     return (
-        <div>
+        <div id="nav-links">
             <nav>
                 <Link to="/">Home</Link>
+                <Link to="/CreateProjectPage">Create Project</Link>
                 {auth.token ? (
                     <Link to="/" onClick={handleLogout}>
                         Log Out

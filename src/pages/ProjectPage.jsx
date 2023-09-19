@@ -20,7 +20,7 @@ function ProjectPage() {
         <div>
             <h2>{project.title}</h2>
             <h3>Created at: {project.date_created}</h3>
-            <h3>{`Status: ${project.is_open}`}</h3>
+            <h4>{project.description}</h4>
             <h3>Pledges:</h3>
             <ul>
                 {project.pledges.map((pledgeData, key) => {
@@ -31,7 +31,7 @@ function ProjectPage() {
                     );
                 })}
             </ul>
-            <CreatePledge project={project.id}></CreatePledge>
+            <CreatePledge projectId={project.id}></CreatePledge>
         </div>
     );
 }

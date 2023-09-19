@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import postPledge from '../api/post-pledge'
 
 function CreatePledge(props) {
+    console.log(props.projectId)
     const navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const [pledgeData, setPledgeData] = useState({
-    project: props.projectId,
     amount: 0,
     comment: '',
     anonymous: false
@@ -30,7 +30,7 @@ function CreatePledge(props) {
         e.preventDefault()
         setIsLoading(true)
 
-        postPledge({...pledgeData, project: props.projectId})
+        postPledge({...pledgeData, project:props.projectId})
         .then(() => {
         navigate(0)
     })

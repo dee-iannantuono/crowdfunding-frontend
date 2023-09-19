@@ -1,26 +1,129 @@
+/* Base HTML Styles */
+
+
 :root {
+	--orange: #fb9b24;
+	--lightblue: #B7E3E4;
 	--blue: #0009AF;
+	--black: #111111;
+	--gray: #c3c3c3;
 	--cream: #FAF0CC;
+	--white: #FFFFFF;
 }
 
+/* CSS Reset */
+
 html {
+	box-sizing: border-box;
 	font-size: 16px;
 	font-family: Helvetica, Arial, sans-serif;
-	color: var(--blue);
+	color: var(--red);
 	scroll-behavior: smooth;
 }
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Global styles  */
+
+label, input, textarea, select {
+    display: block;
+    width: 100%;
+}
+
+input, select, textarea {
+    padding: 8px;
+}
+
+/* Background */
 
 body {
 	background-color: var(--cream);
 }
 
-#project-list {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    column-gap: 10px;
-    row-gap: 10px;
+/* Header */
+
+.nav-links {
+	font-weight: bold;
+    color: var(--red);
+	float: right;
+	padding: 16px;
 }
 
-.NavBar {
-    float: right;
+/* hero */
+
+#hero {
+	padding: 24px;
+	font-size: 3rem;
+	color: var(--red);
+	margin-top: 90px;
+}
+
+/* Projects  */
+
+#project-list {
+	width: auto;
+	display: block;
+	padding: 8px;
+	margin: 2%;
+	align-items: center;
+	text-align: center;
+}
+
+.project-card {
+	padding: 15px;
+	padding-top: 16px;
+	border-color: var(--white);
+	background-color: var(--white);
+	margin-top: 5%;
+	border-radius: 2%;
+}
+
+@media (min-width: 768px){
+    #projects {
+        display: flex;
+		padding: 5%;
+}
+}
+
+@media (min-width: 768px){
+    #project-card {
+        display: flex;
+		margin: 2%;
+		width: 100%;
+}
 }
