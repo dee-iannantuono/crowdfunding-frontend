@@ -24,6 +24,8 @@ function CreateProject() {
     const handleSubmit = (e) => {
         e.preventDefault()
         setIsLoading(true)
+        projectData.date_created = new Date().toISOString();
+        projectData.is_open = true;
 
         postProject({...projectData})
         .then(() => {
