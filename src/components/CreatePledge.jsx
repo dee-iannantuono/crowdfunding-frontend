@@ -30,7 +30,7 @@ function CreatePledge(props) {
         e.preventDefault()
         setIsLoading(true)
 
-    postPledge(pledgeData)
+        postPledge({project: 6})
         .then(() => {
         navigate(0)
     })
