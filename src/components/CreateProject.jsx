@@ -23,7 +23,7 @@ function CreateProject() {
         e.preventDefault()
         setIsLoading(true)
 
-        postProject({...projectData})
+        postProject({...projectData, project:props.projectdate_created, project:props.projectis_true })
         .then(() => {
         navigate(0)
     })
