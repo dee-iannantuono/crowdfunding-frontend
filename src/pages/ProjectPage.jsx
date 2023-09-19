@@ -31,7 +31,7 @@ function ProjectPage() {
                     );
                 })}
             </ul>
-            <CreatePledge></CreatePledge>
+            <CreatePledge project={project.id}></CreatePledge>
         </div>
     );
 }
