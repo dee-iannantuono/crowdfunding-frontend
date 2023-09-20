@@ -10,7 +10,6 @@ import NewUserForm from './pages/CreateNewUser.jsx';
 
 import NavBar from"./components/NavBar.jsx";
 import { AuthProvider } from "./components/AuthProvider.jsx";
-import NewUserForm from './pages/CreateNewUser.jsx';
 
 
 const router =createBrowserRouter([

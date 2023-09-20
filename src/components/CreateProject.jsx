@@ -11,8 +11,6 @@ function CreateProject() {
         goal: "",
         image: "",
         sport: "",
-        date_created: new Date().toISOString(),
-        is_open: true,
     });
 
     const handleChange = (e) => {
@@ -25,10 +23,12 @@ function CreateProject() {
     const handleSubmit = (e) => {
         e.preventDefault()
         setIsLoading(true)
-        projectData.date_created = new Date().toISOString();
-        projectData.is_open = true;
 
-        postProject({...projectData, project: props.projectData.date_created,project: props.projectData.is_open})
+        postProject({...projectData,
+            project: props.projectId,
+            date_created: new Date().toISOString(),
+            is_open: true,
+        })
         .then(() => {
         navigate(0)
     })
