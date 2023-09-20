@@ -25,7 +25,6 @@ function CreateProject() {
         setIsLoading(true)
 
         postProject({...projectData,
-            project: props.projectId,
             date_created: new Date().toISOString(),
             is_open: true,
         })
@@ -67,6 +66,15 @@ if(isLoading) {
                 type="number" 
                 id="goal" 
                 placeholder="goal" 
+                onChange={handleChange} 
+            />
+        </div>
+        <div>
+            <label htmlFor="sport">Sport:</label>
+            <input 
+                type="text" 
+                id="sport" 
+                placeholder="sport" 
                 onChange={handleChange} 
             />
         </div>

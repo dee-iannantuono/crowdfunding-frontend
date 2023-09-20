@@ -12,14 +12,14 @@ function handleDeletePledge(pledgeId) {
         });
 }
 
-    {project.pledges.map((pledgeData, key) => {
-        return (
-            <div key={key}>
-                {pledgeData.amount} from {pledgeData.supporter}
-                <span>Delete this pledge</span>
-                <button onClick={() => handleDeletePledge(pledgeData.id)}>Delete</button>
-            </div>
-        );
-    })}
+    // {project.pledges.map((pledgeData, key) => {
+    //     return (
+    //         <div key={key}>
+    //             {pledgeData.amount} from {pledgeData.supporter}
+    //             <span>Delete this pledge</span>
+    //             <button onClick={() => handleDeletePledge(pledgeData.id)}>Delete</button>
+    //         </div>
+    //     );
+    // })}
 
 export default handleDeletePledge;
