@@ -1,6 +1,6 @@
 import deletePledge from "../api/delete-pledge";
 
-function handleDeletePledge(pledgeId) {
+function HandleDeletePledge(pledgeId) {
     deletePledge(pledgeId)
         .then(() => {
                 setPledges((prevPledges) =>
@@ -22,4 +22,4 @@ function handleDeletePledge(pledgeId) {
     //     );
     // })}
 
-export default handleDeletePledge;
+export default HandleDeletePledge;

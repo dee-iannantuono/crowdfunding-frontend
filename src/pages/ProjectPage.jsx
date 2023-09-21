@@ -1,7 +1,17 @@
 import { useParams } from "react-router-dom";
 import useProject from "../hooks/use-project";
 import CreatePledge from "../components/CreatePledge";
-import handleDeletePledge from "../components/DeletePledge";
+import deletePledge from "../api/delete-pledge"
+
+function handleDeletePledge(pledgeId) {
+    deletePledge(pledgeId)
+        .then(() => {
+            window.location.reload
+        })
+        .catch((error) => {
+            console.error('Error deleting pledge:', error);
+        });
+}
 
 function ProjectPage() {
     // Here we use a hook that comes for free in react router called `useParams`to get the id from the URL so that we can pass it to our useProject hook.
@@ -27,7 +37,7 @@ function ProjectPage() {
                 {project.pledges.map((pledgeData, key) => {
                     return (
                         <li key={key}>
-                            {pledgeData.amount} from {pledgeData.owner} <handleDeletePledge pledgeID={pledgeData.id}></handleDeletePledge>
+                            {pledgeData.amount} from {pledgeData.owner} <input type="button" value="Delete" onClick={() => handleDeletePledge(pledgeData.id)}></input> 
                         </li>
                     );
                 })}
