@@ -41,57 +41,12 @@ ul {
 	padding: 0;
 }
 
-ol,
-ul {
-	list-style: none;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-/* Global styles  */
-
-label, input, textarea, select {
-    display: block;
-    width: 100%;
-}
-
-input, select, textarea {
-    padding: 8px;
-}
-
 /* Background */
 
 body {
 	background-color: var(--cream);
 }
 
-/* Header */
-
-.nav-links {
-	font-weight: bold;
-    color: var(--red);
-	float: right;
-	padding: 16px;
-}
-
-/* hero */
-
-#hero {
-	padding: 24px;
-	font-size: 3rem;
-	color: var(--red);
-	margin-top: 90px;
-}
 
 /* Projects  */
 
@@ -107,10 +62,14 @@ body {
 .project-card {
 	padding: 15px;
 	padding-top: 16px;
-	border-color: var(--white);
 	background-color: var(--white);
 	margin-top: 5%;
 	border-radius: 2%;
+}
+
+.project-card a {
+	color: #0009AF !important;
+	text-decoration: none;
 }
 
 @media (min-width: 768px){

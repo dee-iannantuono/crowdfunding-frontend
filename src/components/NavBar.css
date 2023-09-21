@@ -1,0 +1,18 @@
+#nav-links {
+    color: white; /* Set the text color for links */
+    padding: 10px; /* Add some padding for spacing */
+    justify-content: flex-end; /* Space items evenly in the navbar */ 
+    align-items: center;
+}
+
+#nav-links a {
+    text-decoration: none; /* Remove underlines */
+    color: white; /* Set link text color */
+    margin: 0 10px; /* Add some margin for spacing between links */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.2s; /* Smooth color transition on hover */
+}
+
+#nav-links a:hover {
+    color: #0009AF; /* Change color on hover */
+    }
