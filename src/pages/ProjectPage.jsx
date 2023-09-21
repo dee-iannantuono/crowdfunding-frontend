@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useProject from "../hooks/use-project";
 import CreatePledge from "../components/CreatePledge";
-import deletePledge from "../api/delete-pledge"
+import deletePledge from "../api/delete-pledge";
 
 function handleDeletePledge(pledgeId) {
     deletePledge(pledgeId)
