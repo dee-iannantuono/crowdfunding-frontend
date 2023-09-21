@@ -6,7 +6,7 @@ import deletePledge from "../api/delete-pledge"
 function handleDeletePledge(pledgeId) {
     deletePledge(pledgeId)
         .then(() => {
-            window.location.reload
+            window.location.reload();
         })
         .catch((error) => {
             console.error('Error deleting pledge:', error);

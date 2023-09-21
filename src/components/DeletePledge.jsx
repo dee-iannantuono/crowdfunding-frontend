@@ -1,6 +1,7 @@
 import deletePledge from "../api/delete-pledge";
 
 function HandleDeletePledge(pledgeId) {
+    setIsLoading(true);
     deletePledge(pledgeId)
         .then(() => {
                 setPledges((prevPledges) =>
@@ -9,6 +10,10 @@ function HandleDeletePledge(pledgeId) {
         })
         .catch((error) => {
             console.error('Error deleting pledge:', error);
+            setIsLoading(false)
+        })
+        .finally(() => {
+            setIsLoading(false);
         });
 }
 
